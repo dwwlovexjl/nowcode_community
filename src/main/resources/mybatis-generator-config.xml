@@ -16,26 +16,37 @@
 
         <!-- 这个插件给生成的Java模型对象增加了equals和hashCode方法 -->
         <!--<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>-->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"></plugin>
+        <!--覆盖生成XML文件-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
         <!--  增加范围查询  -->
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
         <!-- 注释 -->
         <commentGenerator>
             <!-- 是否不生成注释 -->
-            <property name="suppressAllComments" value="true"/>
+<!--            <property name="suppressAllComments" value="true"/>-->
             <!-- 不希望生成的注释中包含时间戳 -->
             <!--<property name="suppressDate" value="true"/>-->
             <!-- 添加 db 表中字段的注释，只有suppressAllComments为false时才生效-->
-            <!--<property name="addRemarkComments" value="true"/>-->
+            <property name="addRemarkComments" value="true"/>
         </commentGenerator>
 
 
         <!-- jdbc连接 -->
-        <jdbcConnection driverClass="${spring.datasource.driverClassName}"
-                        connectionURL="${spring.datasource.url}"
-                        userId="${spring.datasource.username}"
-                        password="${spring.datasource.password}">
-            <!--高版本的 mysql-connector-java 需要设置 nullCatalogMeansCurrent=true-->
-            <property name="nullCatalogMeansCurrent" value="true"/>
+<!--        <jdbcConnection driverClass="${spring.datasource.driverClassName}"-->
+<!--                        connectionURL="${spring.datasource.url}"-->
+<!--                        userId="${spring.datasource.username}"-->
+<!--                        password="${spring.datasource.password}">-->
+<!--            &lt;!&ndash;高版本的 mysql-connector-java 需要设置 nullCatalogMeansCurrent=true&ndash;&gt;-->
+<!--            <property name="nullCatalogMeansCurrent" value="true"/>-->
+<!--        </jdbcConnection>-->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/nowcodercommunity"
+                        userId="root"
+                        password="password">
+<!--            配置不去查询其他库-->
+            <property name="nullCatalogMeansCurrent" value="true" />
+            <property name="remarksReporting" value="true"/>
         </jdbcConnection>
 
         <!-- 类型转换 -->

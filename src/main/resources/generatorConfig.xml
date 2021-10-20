@@ -9,7 +9,7 @@
     <!--    建立数据库表 -->
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <!--        插件-->
-        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
+<!--        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>-->
 <!--      配置注释-->
         <commentGenerator>
             <!-- 是否不生成注释 -->
@@ -24,6 +24,8 @@
                         connectionURL="jdbc:mysql://localhost:3306/nowcodercommunity"
                         userId="root"
                         password="password">
+            <property name="nullCatalogMeansCurrent" value="true" />
+            <property name="remarksReporting" value="true"/>
         </jdbcConnection>
 
         <javaTypeResolver >
@@ -50,6 +52,8 @@
 
         <!-- 数据表进行生成操作 schema:相当于库名; tableName:表名; domainObjectName:对应的DO -->
         <table  tableName="user" domainObjectName="User" >
+        </table>
+        <table  tableName="use" domainObjectName="Use" >
         </table>
         <table  tableName="discuss_post" domainObjectName="DiscussPost" >
         </table>

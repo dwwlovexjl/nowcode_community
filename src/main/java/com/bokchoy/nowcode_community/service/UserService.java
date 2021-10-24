@@ -15,7 +15,7 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    public User selectUserById(int id){
-        return userMapper.selectByPrimaryKey(id);
+    public User selectUserById(String id){
+        return userMapper.selectByPrimaryKey(Integer.parseInt(id));
     }
 }

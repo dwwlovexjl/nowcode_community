@@ -1,0 +1,9 @@
+2021-10-24 20:58:42.379  INFO 16012 --- [main] c.bokchoy.nowcode_community.LoggerTest   : Starting LoggerTest using Java 16.0.1 on bokchoy with PID 16012 (started by xjl in D:\JB\code_java\nowcode_community)
+2021-10-24 20:58:42.382 DEBUG 16012 --- [main] c.bokchoy.nowcode_community.LoggerTest   : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-24 20:58:42.385  INFO 16012 --- [main] c.bokchoy.nowcode_community.LoggerTest   : No active profile set, falling back to default profiles: default
+2021-10-24 20:58:45.771  INFO 16012 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-24 20:58:46.439  INFO 16012 --- [main] c.bokchoy.nowcode_community.LoggerTest   : Started LoggerTest in 4.735 seconds (JVM running for 6.323)
+2021-10-24 20:58:47.073 DEBUG 16012 --- [main] c.bokchoy.nowcode_community.LoggerTest   : debug logger
+2021-10-24 20:58:47.074  INFO 16012 --- [main] c.bokchoy.nowcode_community.LoggerTest   : info logger
+2021-10-24 20:58:47.074  WARN 16012 --- [main] c.bokchoy.nowcode_community.LoggerTest   : warn logger
+2021-10-24 20:58:47.074 ERROR 16012 --- [main] c.bokchoy.nowcode_community.LoggerTest   : error logger

@@ -96,18 +96,24 @@
 <!--               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
 <!--               enableUpdateByExample="false" selectByExampleQueryId="false">-->
 <!--            &lt;!&ndash;是否使用实际列名,默认为false&ndash;&gt;-->
+<!--        <generatedKey column="id" sqlStatement="MySql" identity="true"/>设置自增主键-->
 <!--            &lt;!&ndash;<property name="useActualColumnNames" value="false" />&ndash;&gt;-->
 <!--        </table>-->
         <!-- 数据表进行生成操作 schema:相当于库名; tableName:表名; domainObjectName:对应的DO -->
         <table  tableName="user" domainObjectName="User" >
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
         <table  tableName="discuss_post" domainObjectName="DiscussPost" >
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
         <table  tableName="comment" domainObjectName="Comment" >
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
         <table  tableName="message" domainObjectName="Message" >
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
         <table  tableName="login_ticket" domainObjectName="LoginTicket" >
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
     </context>
 </generatorConfiguration>
